@@ -1,4 +1,5 @@
 FROM python:alpine
+LABEL authors="Leonardo Damasceno"
 
 ARG CLI_VERSION=1.16.75
 
