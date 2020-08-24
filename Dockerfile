@@ -1,7 +1,6 @@
 FROM python:3.7-alpine
 
-ARG CLI_VERSION=1.16.140
-
+COPY requirements.txt /tmp
 RUN apk -uv add --no-cache \
       bash \
       coreutils \
@@ -11,8 +10,7 @@ RUN apk -uv add --no-cache \
       jq \
       less \
       && \
-    pip install --no-cache-dir awscli==$CLI_VERSION
-
+    pip install -r /tmp/requirements.txt --no-cache-dir
 WORKDIR /aws
 
 CMD /bin/sh
