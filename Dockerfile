@@ -11,6 +11,7 @@ RUN apk -uv add --no-cache \
       less \
       git \
       make \
+      openssh-client \
       && \
     pip install -r /tmp/requirements.txt --no-cache-dir
 RUN git clone https://github.com/awslabs/git-secrets /tmp/git-secrets \
