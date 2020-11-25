@@ -9,7 +9,6 @@ RUN apk -uv add --no-cache \
       groff \
       jq \
       less \
-      git \
       && \
     pip install -r /tmp/requirements.txt --no-cache-dir
 WORKDIR /aws
